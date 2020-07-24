@@ -1,0 +1,387 @@
+@import 'utility.css';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background: var(--dark);
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 89%,0 100%);
+}
+.container{
+    max-width: 1152px;
+    padding:0 15px;
+    margin: 0 auto;
+}
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none ;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+header nav{
+    padding:2rem 0;
+}
+header nav .branding{
+    margin-right: 3rem;
+}
+header nav .branding img{
+    width: 150px;
+    height: 45px;
+}
+.midsec{
+    padding: 3rem 0;
+
+}
+.midsec .left img{
+    width: 300px;
+}
+.midsec .right{
+    color: var(--pure);
+}
+.midsec .right h1 span{
+    font-size: 1.6rem;
+    color:var(--primary)
+}
+.midsec .right p{
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+.midsec .right{
+    margin-top: -7rem;
+}
+section{
+    padding: 6rem 0;
+}
+section.about .about-img{
+    height: 450px;
+}
+section.about{
+    background: var(--dark);
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 89%,50% 100%,30% 89%,0 100%);
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--pure);
+}
+section.about h1 span{
+    color: var(--primary);
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--pure);
+}
+section.about p{
+    font-family: 'Lato', sans-serif;
+    color: var(--pure);
+    line-height: 1.9;
+    padding-bottom: 1rem;    
+}
+section.about .social{
+    display: flex;
+}
+section.about .social a{
+    background:var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height:35px;
+    border-radius: 50%;
+    --webkit-border-radius:50%;
+    margin-right: 0.9rem;
+    transition: all .3s ease;
+}
+section.about .social a :hover{
+    background: var(--primary);
+}
+section.about .social a img{
+    width: 120%;
+    height: 120%;
+    padding: 0.5rem;
+}
+/* -------------Skills------------------------------- */
+section.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background: var(--dark);
+   
+}
+.card{
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:300px ;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-right: 3rem;
+    justify-content: space-around;
+}
+.card :hover{
+    transform: translateY(-10px);
+    box-shadow: 0,15px,35px,(0,0,0,.5);
+}
+.card :before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: (255,255,255,.03);
+    pointer-events: none;
+    z-index: 1;
+}
+.percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    z-index: 1000;
+}
+.percent .number{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percent .number h2{
+    color: #777;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.percent .number h2 span{
+    font-size: 24px;
+    color:#777;
+
+}
+.card:hover .percent .number h2{
+    color: #fff;
+    font-size: 60px;
+}
+.card:hover .percent .number h2 span{
+    color:#fff;
+}
+.text{
+    position: relative;
+    color:var(--primary);
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+svg circle{
+    width:100%;
+    height: 100;
+    fill:none;
+    stroke : #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px)
+}
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+
+}
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00ff43;
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00a1ff;
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #ff043f;
+}
+.card:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #0000ff;
+}
+section.skills{
+    clip-path: polygon(0 0,100% 0,100% 100%,30% 89%,0 100%);
+}
+/* -----------------------------------Project------------------------------------------ */
+.section-heading{
+    color: var(--pure);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5;
+}
+.section-heading + p{
+    color: var(--pure);
+    font-family: 'Lato',sans-serif;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+.section-heading span{
+    color: var(--primary);
+}
+.card-pro img{
+    width: 100px;
+}
+section.project{
+    background: var(--dark);
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 93%,50% 100%,30% 93%,0 100%);
+}
+section.project .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+section.project .card-wrapper .card-pro{
+    background: var(--pure);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 4rem;
+    text-align: center;
+    transition: all .3s ease;
+}
+section.project .card-wrapper .card-pro img{
+    position: absolute;
+    top: -3.5rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+section.project .card-wrapper .card-pro h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+section.project .card-wrapper .card-pro p{
+    font-family: "Lato",sans-serif;
+    color: var(--ternary);
+    line-height: 1.6;
+}
+section.project .card-wrapper .card-pro:hover{
+    background: #696969;
+}
+section.project .card-wrapper .card-pro:hover h2{
+    color: var(--primary);
+}
+/* ----------------------Contact----------------------------------- */
+section.contact{
+    background: var(--dark);
+    clip-path: polygon(0 0,100% 0,100% 100%,50% 95%,0 100%);
+}
+section.contact .card-wrapper1 .card1 img{
+    width: 80px;
+    margin-bottom: 1rem;
+}
+section.contact .card-wrapper1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+}
+section.contact .card-wrapper1 .card1{
+    text-align: center;
+}
+section.contact .card-wrapper1 .card1 h1{
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+section.contact .card-wrapper1 .card1 h4{
+    font-size: 1rem;
+    color:var(--pure);
+    margin-bottom: 3rem;
+}
+section.contact .input-wrap{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+section.contact .input-wrap2{
+    display: flex;
+    flex-direction: column;
+}
+section.contact .input-wrap2 input{
+    margin-bottom: 2rem;
+}
+section.contact input{
+    padding:0.5rem;
+    border: 1px solid var(--light);
+    font-size: 0.8rem;
+}
+section.contact .input-wrap2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+    font-size: 0.8rem;
+}
+section.contact input:focus{
+    outline: none;
+}
+section.contact .input-wrap2 textarea:focus{
+    outline: none;
+}
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+footer{
+    background: #111111;
+    text-align: center;
+    padding: 5rem 0;
+}
+footer .footer-logo{
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+footer .footer-logo img{
+    width: 320px;
+    height: 80px;
+    
+}
+footer .footer-socials a{
+    margin-right: 1rem;
+    padding-bottom: 2rem;
+}
+footer .footer-socials img{
+    width: 40px;
+}
+footer .copyright{
+    color: #F2F2F2;
+    padding-top: 1rem;
+}

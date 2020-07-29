@@ -385,3 +385,31 @@ footer .copyright{
     color: #F2F2F2;
     padding-top: 1rem;
 }
+@media(max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+}
+.site-main-wrapper{
+    position: relative;   
+}
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.hamberger img{
+    width: 30px;
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--pure);
+}

@@ -385,14 +385,14 @@ footer .copyright{
     color: #F2F2F2;
     padding-top: 1rem;
 }
-@media(max-width:1024px){
+ @media(max-width:1150px){
     header #main-nav{
         display: none;
     }
-    section.about .about-img{
+   /* section.about .about-img{
         width: 300px;
         height: 360px;
-    }
+    } */
 }
 .site-main-wrapper{
     position: relative;   
@@ -416,19 +416,12 @@ footer .copyright{
     left: 0;
     z-index: 1001;
     background: var(--light);
-}
-.mobile-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    background: var(--light);
     width: 100%;
     height: 100%;
     padding: 2rem;
     padding-top: 5rem;
     transform: translateX(-100%);
-    transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; 
 }
 .open{
     transform: translateX(0);
@@ -454,7 +447,7 @@ footer .copyright{
     text-decoration: none;
     font-size: 2rem;
 }
-@media (min-width: 576px){
+/* @media (min-width: 576px){
     .container{
         max-width: 540px;
     }
@@ -473,4 +466,4 @@ footer .copyright{
     .container{
         max-width: 1152px;
     }
-}
+}  */

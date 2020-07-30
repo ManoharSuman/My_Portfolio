@@ -389,6 +389,10 @@ footer .copyright{
     header #main-nav{
         display: none;
     }
+    section.about .about-img{
+        width: 300px;
+        height: 360px;
+    }
 }
 .site-main-wrapper{
     position: relative;   
@@ -424,6 +428,7 @@ footer .copyright{
     padding: 2rem;
     padding-top: 5rem;
     transform: translateX(-100%);
+    transition: all .5s ease-in-out;
 }
 .open{
     transform: translateX(0);
@@ -448,4 +453,23 @@ footer .copyright{
     color: #00a1ff;
     text-decoration: none;
     font-size: 2rem;
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
 }

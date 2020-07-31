@@ -385,9 +385,13 @@ footer .copyright{
     color: #F2F2F2;
     padding-top: 1rem;
 }
-@media(max-width:1150px){
+/* _____________________Media Query_______________________ */
+@media(max-width:1024px){
     header #main-nav{
         display: none;
+    }
+    .hamberger{
+        display: block;
     }
 }
 .site-main-wrapper{
@@ -402,6 +406,7 @@ footer .copyright{
     border: none;
     outline: none;
     cursor: pointer;
+    display: none;
 }
 .hamberger img{
     width: 30px;
